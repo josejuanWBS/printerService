@@ -72,6 +72,45 @@ of Continuous Integration, Continuous Delivery and Continuous Deployment (DevOps
   ```
   ...
 
-  # activation 
-  $ source .venv/bin/activate
+
+- Continuous Integration with TravisCI:
+
   ```
+  # my notes about TravisCI
+  ```
+  
+- Deployment with Docker:
+
+  ```
+  # my notes about docker
+  ```
+
+# Auxiliar Information
+
+## Ubuntu
+
+- Docker Installation: [docker howto](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+
+## Centos
+
+- Docker Installation:
+
+  ```
+  $ yum remove docker \
+        docker-common \
+        container-selinux \
+        docker-selinux \
+        docker-engine
+
+  $ yum install -y yum-utils
+
+  $ yum-config-manager \
+      --add-repo \
+      https://download.docker.com/linux/centos/docker-ce.repo
+
+  $ yum makecache fast
+  $ yum install -y docker-ce
+  $ systemctl start docker
+  ```
+  
+  
