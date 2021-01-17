@@ -21,7 +21,7 @@ class Test_Flask_Views:
     def test_outputs(self):
         rv = self.app.get('/outputs')
         r = rv.data.decode('utf-8')        # Arg received as bytes, decode to obtain string
-        r = r.replace(' ',"")              # Unnecessary spaces
+        r = r.replace(' ',"")              # Unnecessary blank spaces
         r = r.split(',')                   # Obtaining the list of args
 
         assert r == SUPPORTED

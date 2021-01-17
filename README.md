@@ -47,20 +47,20 @@ of Continuous Integration, Continuous Delivery and Continuous Deployment (DevOps
   
   It should display something like:
   ```
-  # (base) user@pc:~/Projects/printerService$ python3 -m pytest -v test/
-  # ========================================== test session starts ===============================================
-  # platform linux -- Python 3.8.3, pytest-6.2.1, py-1.9.0, pluggy-0.13.1
-  # rootdir: /home/Projects/printerService
-  # collected 7 items
-  #
-  # test/test_formater.py::Test_Formater::test_plain_uppercase PASSED                                       [ 14%]
-  # test/test_formater.py::Test_Formater::test_plain_text PASSED                                            [ 28%]
-  # test/test_formater.py::Test_Formater::test_get_formatted PASSED                                         [ 42%]
-  # test/test_views.py::Test_Flask_Views::test_output PASSED                                                [ 57%]
-  # test/test_views.py::Test_Flask_Views::test_outputs PASSED                                               [ 71%]
-  # test/test_views.py::Test_Flask_Views::test_form PASSED                                                  [ 85%]
-  # test/test_views.py::Test_Flask_Views::test_mult PASSED                                                  [100%]
-  # ========================================== 7 passed in 0.09s =================================================
+  (base) user@pc:~/Projects/printerService$ python3 -m pytest -v test/
+  ============================== test session starts =============================================
+  platform linux -- Python 3.8.3, pytest-6.2.1, py-1.9.0, pluggy-0.13.1
+  rootdir: /home/Projects/printerService
+  collected 7 items
+  
+  test/test_formater.py::Test_Formater::test_plain_uppercase PASSED                         [ 14%]
+  test/test_formater.py::Test_Formater::test_plain_text PASSED                              [ 28%]
+  test/test_formater.py::Test_Formater::test_get_formatted PASSED                           [ 42%]
+  test/test_views.py::Test_Flask_Views::test_output PASSED                                  [ 57%]
+  test/test_views.py::Test_Flask_Views::test_outputs PASSED                                 [ 71%]
+  test/test_views.py::Test_Flask_Views::test_form PASSED                                    [ 85%]
+  test/test_views.py::Test_Flask_Views::test_mult PASSED                                    [100%]
+  ============================= 7 passed in 0.09s ================================================
   ```
 - By continuing to work with the project, activating and deactivating the hermetic environment for py application:
 
