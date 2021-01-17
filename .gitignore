@@ -3,3 +3,5 @@
 /__pytest_cache__/*
 .pytest_cache/*
 */.pytest_cache/*
+service/__pycache__/*
+test/__pycache__/*

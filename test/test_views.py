@@ -31,7 +31,7 @@ class Test_Flask_Views:
         r = rv.data.decode('utf-8')       # Arg received as bytes, decode to obtain string
         # TODO HINT for the assignment 2:
         # if you need to get a number, after decoding to utf-8 you will need to cast it to float or int
-        # Example: r = int(rv.data.decode('utf-8'))
+        # Example: r = int(rv.data.decode('utf-8')). But only in case that you need it
         assert r == 'LUCAS WELCOME'
         
     def test_mult(self,data_expected):
