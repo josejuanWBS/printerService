@@ -37,4 +37,4 @@ class Test_Flask_Views:
     def test_mult(self,data_expected):
         rv = self.app.get('http://127.0.0.1:5000/plainx2')
         r = rv.data.decode('utf-8')
-        assert r == 'Jose welcome to your first page!'*2
+        assert False #r == 'Jose welcome to your first page!'*2
