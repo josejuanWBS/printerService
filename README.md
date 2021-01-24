@@ -1,8 +1,19 @@
-# Simple Flask App
+# CI/CD Pipeline for simple Python Flask Service
 
 Teaching app displaying name and message in different formats for the course of SBAT about
 of Continuous Integration, Continuous Delivery and Continuous Deployment (DevOps).
 
+### Technologies and platforms used:
+
+1. [Python](https://www.python.org/) [[Flask](https://flask.palletsprojects.com/en/1.1.x/), [pytest](https://docs.pytest.org/en/stable/index.html)]
+2. [Git](https://git-scm.com/)
+3. [GitHub](https://github.com/)
+4. [Travis-CI](https://travis-ci.com/)
+5. [Docker](https://www.docker.com/)
+6. [Docker-Hub](https://hub.docker.com/)
+[comment]: <> 7. [Heroku](https://www.heroku.com/) (Not needed for students)
+
+### Python Web Service with Flask
 - <b>(Optional)</b> In the project, if you want you can use a virtual environment to create a hermetic environment for the application:
 
   ```
