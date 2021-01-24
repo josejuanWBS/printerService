@@ -11,7 +11,10 @@ of Continuous Integration, Continuous Delivery and Continuous Deployment (DevOps
 4. [Travis-CI](https://travis-ci.com/)
 5. [Docker](https://www.docker.com/)
 6. [Docker-Hub](https://hub.docker.com/)
-[comment]: <> 7. [Heroku](https://www.heroku.com/) (Not needed for students)
+
+
+[] (# 7. [Heroku](https://www.heroku.com/) (Not needed for students))
+
 
 ### Python Web Service with Flask
 - <b>(Optional)</b> In the project, if you want you can use a virtual environment to create a hermetic environment for the application:
