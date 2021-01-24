@@ -90,7 +90,7 @@ of Continuous Integration, Continuous Delivery and Continuous Deployment (DevOps
 
 ## Ubuntu
 
-- Docker Installation: [docker howto](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+- Docker Installation: [docker howto](https://docs.docker.com/engine/install/)
 
 ## Centos
 
