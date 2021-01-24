@@ -95,12 +95,14 @@ of Continuous Integration, Continuous Delivery and Continuous Deployment (DevOps
   ```
 
 ### Version Control System with git and GitHub
-The following URLs are specific for this repo, if you would like to work with your own repository you could 
-substitute them for:
-```
-               https://github.com/user_name/name_repo.git branch_name
-```
+Create an account in [GitHub](https://github.com/) and a new remote repository in which you will be working. 
 
+The following example URLs are specific for this repo, if you would like to work with your own repository 
+you could substitute them for:
+```
+               https://github.com/[user_name]/[name_repo].git [branch_name]
+```
+Also note that you can use another protocol like ssh, instead of https.
 #### Initialize repo
 ###### Initialize local repo from already created remote repo (GitHub)
 To initialize a local repo from a remote repo we need to clone the remote repo.
@@ -187,10 +189,21 @@ III. If there is a conflict, that needs to be solved manually then:
 
 ### Continuous Integration with TravisCI:
 
+1. Sign in [Travis-CI](https://travis-ci.com/) with GitHub account
+2. Make a .travis.yml file in the base directory with a basic configuration like:
   ```
-  # my notes about TravisCI
+  language: python
+  python:
+    - "3.8"
+  install:
+  - pip install -r requirements.txt
+  - pip install -r test_requirements.txt
+  script:
+  - python -m pytest -v
   ```
-  
+3. Trigger a build by pushing changes to the repo or manually by the button trigger build.
+4. Check the build success and if the tests passed.
+
 ### Deployment with Docker:
   ```
   # my notes about docker
