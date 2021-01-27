@@ -1,3 +1,6 @@
+sudo: required
+services
+- docker
 language: python
 python:
   - "3.8"
@@ -8,3 +11,5 @@ install:
 script:
 # unit test
 - python -m pytest -v
+after_success:
+- sh .travis/deploy_dockerhub.sh

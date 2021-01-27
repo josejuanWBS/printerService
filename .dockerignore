@@ -1,3 +1,4 @@
+.git
 .idea/*
 **/__pytest_cache__
 /__pytest_cache__/
@@ -5,5 +6,5 @@
 **/.pytest_cache
 service/__pycache__/
 test/__pycache__/
-Dockerfile.local
 Dockerfile.error
+Dockerfile.local
