@@ -4,8 +4,6 @@ TAG="latest"
 else
 TAG="$TRAVIS_BRANCH"
 fi
-slug=$TRAVIS_REPO_SLUG:$TAG
-sl=$TRAVIS_REPO_SLUG
-docker build -f Dockerfile -t "${slug,,}" .
-docker tag "${sl,,}" $DOCKER_REPO
+docker build -f Dockerfile -t $TRAVIS_REPO_SLUG:$TAG .
+docker tag $TRAVIS_REPO_SLUG $DOCKER_REPO
 docker push $DOCKER_REPO
