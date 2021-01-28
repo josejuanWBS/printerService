@@ -8,4 +8,4 @@ WORKDIR /service
 RUN pip3 install -r requirements.txt
 RUN pip3 install -r test_requirements.txt
 ENTRYPOINT ["python"]
-CMD ["printerService/views.py"]
+CMD ["app.py"]
