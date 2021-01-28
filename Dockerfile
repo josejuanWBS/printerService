@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER JoseJuan jose.pena.gomez@wsb.wroclaw.pl
+MAINTAINER josejuanWSB jose.pena.gomez@wsb.wroclaw.pl
 RUN apt-get update -y
 RUN apt-get install -y python3-pip python-dev build-essential
 RUN apt-get clean
