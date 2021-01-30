@@ -218,7 +218,7 @@ III. If there is a conflict, that needs to be solved manually then:
   Run the image -d = detach (run on background), -p = publish ports, image_name.
 The app will accessible by the URL http://0.0.0.0:8000/
   ```
-  $ WORKS docker run -p 8000:80 printer_local:latest
+  $ docker run -p 8000:80 printer_local:latest
   ```
   In case that you will have problems, and you need to debug your app
   -ti = terminal interactive -> /bin/sh is a terminal that you can open inside the container
