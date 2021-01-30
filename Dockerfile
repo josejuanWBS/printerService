@@ -6,11 +6,11 @@ WORKDIR /app
 
 #Copy the dependencies file to the working directory
 COPY requirements.txt .
-COPY test_requirements.txt .
+#COPY test_requirements.txt .
 
 #Install the dependencies
 RUN pip install -r requirements.txt
-RUN pip install -r test_requirements.txt
+#RUN pip install -r test_requirements.txt
 
 #Copy the Flask app code to the working directory
 COPY service/ ./service
