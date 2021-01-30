@@ -205,10 +205,43 @@ III. If there is a conflict, that needs to be solved manually then:
 4. Check the build success and if the tests passed.
 
 ### Deployment with Docker:
+  First you need to set the port of Flask to use a different port than the one by default
+  main of your Flask service as follows:
   ```
-  # my notes about docker
+    if __name__ == '__main__':
+        app.run(host='0.0.0.0', port=80)
+  ```
+  Build the image from the Dockerfile
+  ```
+  $ docker build -f Dockerfile.local -t printer_local .
+  ```
+  Run the image -d = detach (run on background), -p = publish ports, image_name.
+The app will accessible by the URL http://0.0.0.0:8000/
+  ```
+  $ WORKS docker run -p 8000:80 printer_local:latest
+  ```
+  In case that you will have problems, and you need to debug your app
+  -ti = terminal interactive -> /bin/sh is a terminal that you can open inside the container
+  ```
+  $ docker container run -ti printer_local:latest /bin/sh
   ```
 
+#### Containers cleaning
+To additionally remove any stopped containers and all unused images (not just dangling images), 
+add the -a flag to the command:
+  ```
+  $ docker system prune -a
+  ```
+Use the docker images command with the -a flag to locate the ID of the images you want to remove. This will show you every image, including intermediate image layers. When you’ve located the images you want to delete, you can pass their ID or tag to docker rmi:
+
+List images to remove:
+  ```
+  $ docker images -a
+  ```
+Remove:
+  ```
+  $ docker rmi image_name
+  ```
 ## Auxiliar Information
 ### A Note for Windows Users
 This project was implemented from a Linux/UNIX based perspective, but everything can be made to work in 

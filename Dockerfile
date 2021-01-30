@@ -1,11 +1,19 @@
-FROM ubuntu:latest
+#Download Python-Alpine based image from DockerHub and use it
+FROM python:3.8.3-alpine
 MAINTAINER josejuanWSB jose.pena.gomez@wsb.wroclaw.pl
-RUN apt-get update -y
-RUN apt-get install -y python3-pip python-dev build-essential
-RUN apt-get clean
-COPY . /service
-WORKDIR /service
-RUN pip3 install -r requirements.txt
-RUN pip3 install -r test_requirements.txt
-ENTRYPOINT ["python"]
-CMD ["app.py"]
+#Set the working directory in the Docker container
+WORKDIR /app
+
+#Copy the dependencies file to the working directory
+COPY requirements.txt .
+COPY test_requirements.txt .
+
+#Install the dependencies
+RUN pip install -r requirements.txt
+RUN pip install -r test_requirements.txt
+
+#Copy the Flask app code to the working directory
+COPY service/ ./service
+COPY app.py .
+#Run the container
+CMD [ "python", "./app.py" ]
