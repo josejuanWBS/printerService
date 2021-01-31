@@ -213,7 +213,7 @@ III. If there is a conflict, that needs to be solved manually then:
   ```
   Build the image from the Dockerfile
   ```
-  $ docker build -f Dockerfile.local -t printer_local .
+  $ docker build -f Dockerfile -t printer_local .
   ```
   Run the image -d = detach (run on background), -p = publish ports, image_name.
 The app will accessible by the URL http://0.0.0.0:8000/

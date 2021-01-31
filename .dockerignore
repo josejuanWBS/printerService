@@ -1,10 +1,10 @@
 .git
+*.py[cod]
 .idea/*
-**/__pytest_cache__
-/__pytest_cache__/
+.pytest_cache
+*cache*/
+__pycache__/
+!**/__pycache__/
+*pytest_cache*/
 .pytest_cache/
-**/.pytest_cache
-service/__pycache__/
-test/__pycache__/
-Dockerfile.error
-Dockerfile.local
+**pytest_cache/
